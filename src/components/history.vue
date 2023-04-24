@@ -8,7 +8,7 @@ export default {
   },
   data() {
     return {
-      jsonData: [
+      jsonDatas: [
         {
           id: 32,
           orderId: "325543435334abfdgg",
@@ -90,6 +90,9 @@ export default {
   position: relative;
 }
 .item-list span {
+}
+.item-list:has(.list-container) span {
+  grid-row-start: 3;
   position: absolute;
   left: calc(0 + (100% / 13));
   top: 0;
@@ -98,9 +101,6 @@ export default {
   z-index: 1;
   background: #101c46;
   border-radius: 18px;
-}
-.item-list:has(.list-container) span {
-  grid-row-start: 3;
 }
 .item-list input {
   width: 257px;
