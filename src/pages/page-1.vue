@@ -3,18 +3,22 @@ import progressLine from "../components/progress.vue";
 </script>
 
 <template>
-  <v-app>
-    <!-- main -->
-    <v-main style="background-color: #000825">
-      <h1 class="text-white text-6xl font-bold text-center">Orders</h1>
-      <p class="text-white text-center mt-10">
-        this page show you the count of succes and the count of fail.
-      </p>
-      <v-container class="d-flex justify-center align-center text-h5">
-        <!-- template of progress -->
-        <progressLine />
-        <!--  -->
-      </v-container>
-    </v-main>
-  </v-app>
+  <div>
+    <v-app>
+      <v-main class="custom">
+        <v-container style="align-content: space-evenly">
+          <progressLine />
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
 </template>
+
+<script setup lang="ts"></script>
+
+<style scoped>
+.custom {
+  background-color: #000825 !important;
+  color: white;
+}
+</style>
