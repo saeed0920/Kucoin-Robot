@@ -8,13 +8,15 @@ export default {
   },
   data() {
     return {
-      jsonData: [],
+      jsonData: [
+        { id: 32, name: "test", api: "325543435334abfdgg" },
+
+        { id: 32, name: "test", api: "325543435334abfdgg" },
+
+        { id: 32, name: "test", api: "325543435334abfdgg" },
+        { id: 32, name: "test", api: "325543435334abfdgg" },
+      ],
     };
-  },
-  mounted() {
-    fetch("/jsonfile.json")
-      .then((response) => response.json())
-      .then((data) => (this.jsonData = data));
   },
 };
 </script>
@@ -125,7 +127,7 @@ export default {
   background-color: #101c46;
   border-radius: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1rem;
   padding: 1rem;
 }
