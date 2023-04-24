@@ -1,18 +1,20 @@
 <script setup>
-import progressLine from "./components/progress.vue";
+import fileForm from "./components/fileForm.vue";
 </script>
 
 <template>
   <v-app>
     <!-- main -->
     <v-main style="background-color: #000825">
-      <h1 class="text-white text-6xl font-bold text-center">Orders</h1>
+      <h1 class="text-white text-6xl font-bold text-center">Manage Accounts</h1>
       <p class="text-white text-center mt-10">
-        this page show you the count of succes and the count of fail.
+        To access premium features and personalize your experience, you can
+        <br />
+        easily manage your account settings on our site.
       </p>
       <v-container class="d-flex justify-center align-center text-h5">
-        <!-- template of progress -->
-        <progressLine />
+        <!-- template of fileform -->
+        <fileForm />
         <!--  -->
       </v-container>
     </v-main>

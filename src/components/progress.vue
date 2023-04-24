@@ -11,7 +11,7 @@
     </v-progress-linear>
 
     <div
-      class="grid grid-rows-[minmax(max-content,_1fr)] grid-cols-2 mt-12 gap-10"
+      class="grid grid-rows-[minmax(max-content,_1fr)] grid-cols-2 mt-12 gap-6"
     >
       <p
         class="text-white leading-5 text-base font-medium p-8 bg-[#17203D] rounded-lg"

@@ -1,0 +1,18 @@
+.form {
+  row-gap: 1rem;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.form input {
+  width: 120px;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+  grid-column: 2/3;
+}
+.form label {
+  color: white;
+  font-size: 18px;
+}/*# sourceMappingURL=main.css.map */
