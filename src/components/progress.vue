@@ -1,10 +1,10 @@
 <template>
-  <h1 class="text-white text-h5 font-bold text-center">Orders</h1>
+  <h1 class="text-white text-6xl font-bold text-center">Orders</h1>
   <p class="p-style">
     this page show you the count of succes and the count of fail.
   </p>
 
-  <div class="d-flex justify-center align-center text-h5">
+  <div class="d-flex justify-center align-center text-h5 flex-column">
     <v-progress-linear
       style="background-color: #59607b"
       v-model="percent"
@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style scoped>
+.flex-column {
+  flex-direction: column;
+  padding: 4rem 0;
+}
 .p-style {
   margin-top: 8px;
   align-items: center;

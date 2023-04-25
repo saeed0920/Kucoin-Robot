@@ -1,15 +1,13 @@
 <script setup>
-import fileForm from "./components/fileForm.vue";
+import progressLine from "./components/progress.vue";
 </script>
 
-<!--  -->
 <template>
   <div>
     <v-app>
       <v-main class="custom">
         <v-container style="align-content: space-evenly">
-          <!-- template of fileform -->
-          <fileForm />
+          <progressLine />
         </v-container>
       </v-main>
     </v-app>
