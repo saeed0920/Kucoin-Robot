@@ -4,6 +4,7 @@
     this page show you the count of succes and the count of fail.
   </p>
 
+  <span class="bruh">Progress:</span>
   <div class="d-flex justify-center align-center text-h5 flex-column">
     <v-progress-linear
       style="background-color: #59607b"
@@ -46,13 +47,20 @@ export default {
 <style scoped>
 .flex-column {
   flex-direction: column;
-  padding: 4rem 0;
+  padding-bottom: 4rem;
 }
 .p-style {
   margin-top: 8px;
   align-items: center;
   text-align: center;
   color: white;
+  margin-bottom: 4rem;
+}
+
+span.bruh {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: -4rem;
 }
 .custom-display {
   display: grid;
