@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="{ bgCheck }">
+  <div class="card" :class="{ bgSelect: bgCheck }">
     <input type="checkbox" v-model="bgCheck" />
     <h1>ID: {{ data.id }}</h1>
     <h1>Name: {{ data.name }}</h1>
@@ -31,16 +31,15 @@ export default {
   align-items: flex-start;
   background-color: transparent;
   border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 .card h1 {
-  font-family: "Lato";
   font-style: normal;
   font-weight: 900;
   font-size: 29px;
   line-height: 35px;
 }
 .card h3 {
-  font-family: "Lato";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -51,7 +50,6 @@ h3:first-of-type {
   margin-top: 2rem;
 }
 .card input {
-  font-family: "Lato";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -63,7 +61,7 @@ h3:first-of-type {
   background: #ff005c;
   align-self: flex-end;
 }
-.bgCheck {
+.bgSelect {
   transition: all 0.2s;
   background-color: #253363 !important;
 }

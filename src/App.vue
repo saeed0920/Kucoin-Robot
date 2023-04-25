@@ -1,5 +1,5 @@
 <script setup>
-import history from "./components/history.vue";
+import fileForm from "./components/fileForm.vue";
 </script>
 
 <!--  -->
@@ -8,8 +8,8 @@ import history from "./components/history.vue";
     <v-app>
       <v-main class="custom">
         <v-container style="align-content: space-evenly">
-          <!-- template of history -->
-          <history />
+          <!-- template of fileform -->
+          <fileForm />
         </v-container>
       </v-main>
     </v-app>

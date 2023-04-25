@@ -1,6 +1,6 @@
 <template>
-  <h1 class="text-white text-6xl font-bold text-center">Orders</h1>
-  <p class="text-white text-center mt-10">
+  <h1 class="text-white text-h5 font-bold text-center">Orders</h1>
+  <p class="p-style">
     this page show you the count of succes and the count of fail.
   </p>
 
@@ -44,12 +44,22 @@ export default {
 </script>
 
 <style scoped>
+.p-style {
+  margin-top: 8px;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
 .custom-display {
   display: grid;
   grid-template-rows: minmax(max-content, 1fr);
   grid-template-columns: repeat(2, 1fr);
   margin-top: 3rem;
   gap: 1.5rem;
+}
+
+.text-6xl {
+  font-size: 64px;
 }
 
 .p-styles {

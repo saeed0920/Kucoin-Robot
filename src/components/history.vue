@@ -8,7 +8,7 @@ export default {
   },
   data() {
     return {
-      jsonDatas: [
+      jsonData: [
         {
           id: 32,
           orderId: "325543435334abfdgg",
@@ -51,7 +51,7 @@ export default {
 </script>
 <template>
   <h1 class="text-white text-6xl font-bold text-center">Order History</h1>
-  <p class="text-white text-center mt-10">
+  <p class="p-style">
     Your order history is a testament to the seamless organization and <br />
     efficiency of our site, ensuring that every purchase is recorded and easily
     <br />
@@ -81,34 +81,42 @@ export default {
 </template>
 
 <style scoped>
+.p-style {
+  margin-top: 8px;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
 .item-list {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
-  margin-top: 2rem;
   row-gap: 2rem;
   padding: 2rem;
   position: relative;
 }
-.item-list span {
-}
+
 .item-list:has(.list-container) span {
   grid-row-start: 3;
   position: absolute;
-  left: calc(0 + (100% / 13));
+  right: calc((100% / 13) + 13px);
   top: 0;
-  width: calc((100% / 13) * 12);
+  width: calc((100% / 13) * 12 - 1rem);
   height: 100%;
   z-index: 1;
   background: #101c46;
   border-radius: 18px;
 }
+
+.text-6xl {
+  font-size: 64px;
+}
+
 .item-list input {
   width: 257px;
   height: 50px;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   justify-self: flex-end;
-  font-family: "Lato";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -131,7 +139,7 @@ export default {
 
 .header h1 {
   line-break: normal;
-  font-family: "Lato";
+
   font-style: normal;
   font-weight: 800;
   font-size: 18px;

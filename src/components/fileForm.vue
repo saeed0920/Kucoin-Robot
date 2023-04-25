@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      arrayList: [],
       jsonData: [
         { id: 32, name: "test", api: "325543435334abfdgg" },
 
@@ -18,16 +19,25 @@ export default {
       ],
     };
   },
+  methods: {
+    deletAll(event) {
+      this.arrayList = [];
+      const items = document.querySelectorAll(".bgSelect");
+      for (const child of items) {
+        this.arrayList.push(child.id);
+      }
+    },
+  },
 };
 </script>
 <template>
   <h1 class="text-white text-6xl font-bold text-center">Manage Accounts</h1>
-  <p class="text-white text-center mt-10">
+  <p class="p-style">
     To access premium features and personalize your experience, you can
     <br />
     easily manage your account settings on our site.
   </p>
-  <div class="flex-col d-flex justify-center align-center text-h5">
+  <div class="flex-col d-flex justify-center align-center">
     <form class="form">
       <label class="custom mt-4">
         <v-file-input
@@ -49,22 +59,37 @@ export default {
     <div class="container__cards">
       <header>
         <h1>Total Count: {{ jsonData.length }}</h1>
-        <input type="button" value="Delete All" />
+        <input type="button" value="Delete All" @click="deletAll" />
       </header>
       <div>
         <!-- component of cards -->
         <!-- <cards /> -->
-        <theCards v-for="(item, index) in jsonData" :key="index" :data="item" />
+        <theCards
+          v-for="(item, index) in jsonData"
+          :key="index"
+          :id="index"
+          :data="item"
+        />
       </div>
     </div>
   </div>
 </template>
 <style scoped>
-* {
-  font-family: "Lato";
+.mt-4 {
+  margin-top: 2rem;
+}
+.p-style {
+  margin-top: 8px;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 .flex-col {
   flex-direction: column;
+}
+
+.text-6xl {
+  font-size: 64px;
 }
 
 .form {
@@ -112,7 +137,9 @@ export default {
 }
 .container__cards header {
   display: flex;
-  padding: 2rem;
+  padding: 1rem 2rem;
+}
+.container__cards header h1 {
   font-size: 30px;
 }
 .container__cards header input {
